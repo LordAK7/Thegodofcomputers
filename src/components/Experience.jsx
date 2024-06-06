@@ -15,7 +15,7 @@ const Timeline = () => {
     visible: (custom) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, delay: custom * 0.2 }, // Adjust the delay here
+      transition: { duration: 0.6, delay: custom * 0.1 }, // Adjust the delay here
     }),
   };
 
