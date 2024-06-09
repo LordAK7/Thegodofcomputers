@@ -1,65 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+import React from "react";
 
-const Home = () => {
-  const [wordIndex, setWordIndex] = useState(0);
-  const words = ['Developer', 'Programmer', 'Fullstack Dev'];
-  const [typedText, setTypedText] = useState('');
-  const [isTyping, setIsTyping] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (isTyping) {
-        const word = words[wordIndex];
-        if (typedText.length < word.length) {
-          setTypedText((prevTypedText) => prevTypedText + word[typedText.length]);
-        } else {
-          setIsTyping(false);
-          setTimeout(() => {
-            let tempTypedText = typedText;
-            const backspaceInterval = setInterval(() => {
-              if (tempTypedText.length === 0) {
-                clearInterval(backspaceInterval);
-                setIsTyping(true);
-                setTypedText('');
-                setWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-              } else {
-                tempTypedText = tempTypedText.slice(0, -1);
-                setTypedText(tempTypedText);
-              }
-            }, 100);
-          }, 1000);
-        }
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, [wordIndex, typedText, isTyping]);
-
+const Hero = () => {
   return (
-    <div name='home' className='w-full h-screen bg-[#000000]'>
-      <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-        <p className='text-[#ffffff] text-sm sm:text-base'>Hi, my name is</p>
-        <h1 className='text-3xl sm:text-7xl font-bold text-[#B0CDF1]'>
-          ADITYA
-        </h1>
-        <h2 className='text-3xl sm:text-7xl font-bold text-slate text-[#E8E6E3]'>
-          I'm a {typedText}
-        </h2>
-        <p className='text-[#ffffff] py-4 max-w-[700px] text-xs sm:text-sm'>
-          My name is Aditya. I am a 15-year-old enthusiast passionate about coding, development, and leveraging my extensive computer skills to solve real-world problems. I also have a keen interest in building custom PCs.
-        </p>
-        {/* <div>
-          <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#B0CDF1] hover:text-black hover:border-white'>
-            View Work
-            <span className='group-hover:rotate-90 duration-300'>
-              <HiArrowNarrowRight className='ml-3 ' />
-            </span>
-          </button>
-        </div> */}
-      </div>
+    <div>
+      {/* Change the height of this section as needed */}
+      <section className="bg-[#000005] overflow-hidden relative h-[20vh] flex items-center justify-center"> {/* Example for 30% of the viewport height */}
+        <div className="relative w-full mx-auto max-w-7xl">
+          <div className="relative flex flex-col w-full p-5 mx-auto lg:px-16 md:flex-row md:items-center md:justify-center md:px-6">
+            {/* Removed Windstatic text and related elements */}
+          </div>
+        </div>
+      </section>
+
+      {/* Change the height of this section as needed */}
+      <section className="items-center justify-center bg-[#000005] flex h-[75vh]"> {/* Example for 75% of the viewport height */}
+        <div className="relative items-center w-full px-5 py-12 mx-auto lg:px-16 max-w-7xl md:px-12 lg:py-48">
+          <div className="max-w-3xl mx-auto text-center">
+            <div>
+              <span className="w-auto px-6 py-3 rounded-full bg-white/5">
+                <span className="text-sm font-medium text-[#50d236]">This is a developer's portfolio</span>
+              </span>
+              <p className="mt-8 text-3xl font-extrabold tracking-tight text-white lg:text-6xl">
+                Some random text 
+                <span className="md:block">would not like to be here</span>
+              </p>
+              <p className="max-w-xl mx-auto mt-8 text-base lg:text-xl text-slate-300">
+                Effortlessly create, pitch, and validate your early-stage business
+                with our no-code landing page builder.
+              </p>
+            </div>
+            <div className="flex flex-col justify-center max-w-sm gap-3 mx-auto mt-10 sm:flex-row">
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default Home;
+export default Hero;
