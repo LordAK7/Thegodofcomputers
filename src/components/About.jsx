@@ -55,7 +55,7 @@ const About = () => {
             I'm Aditya,
           </motion.span>
           <motion.span 
-            className={`block text-[#ffffff] ${textSize}`}
+            className={`block ${textSize} text-[#ffffff]`}
             initial="hidden"
             animate={controls}
             variants={{
@@ -64,11 +64,16 @@ const About = () => {
             }}
             transition={{ duration: animationDuration, ease: 'easeInOut', delay: animationDuration * 1 }}
           >
-            a Fullstack
-            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"> Developer</span>
+            a Fullstack&nbsp;
+            <span 
+              className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+              style={{ background: 'linear-gradient(to right, #3b82f6, #2563eb)', WebkitBackgroundClip: 'text', color: 'transparent' }}
+            >
+              Developer
+            </span>
           </motion.span>
           <motion.span 
-            className={`block text-[#ffffff] ${textSize}`}
+            className={`block ${textSize} text-[#ffffff]`}
             initial="hidden"
             animate={controls}
             variants={{
@@ -80,7 +85,7 @@ const About = () => {
             that creates interactive
           </motion.span>
           <motion.span 
-            className={`block text-[#ffffff] ${textSize}`}
+            className={`block ${textSize} text-[#ffffff]`}
             initial="hidden"
             animate={controls}
             variants={{
@@ -89,7 +94,12 @@ const About = () => {
             }}
             transition={{ duration: animationDuration, ease: 'easeInOut', delay: animationDuration * 2 }}
           >
-            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">web</span> applications..
+            <span 
+              className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+              style={{ background: 'linear-gradient(to right, #3b82f6, #2563eb)', WebkitBackgroundClip: 'text', color: 'transparent' }}
+            >
+              web
+            </span> applications..
           </motion.span>
         </motion.h2>
       </motion.div>
