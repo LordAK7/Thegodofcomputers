@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import expressSVG from '../../public/assets/express.svg';
-import framerMotionSVG from '../../public/assets/framermotion.svg';
-import graphQLSVG from '../../public/assets/graphql.svg';
-import mongoDBSVG from '../../public/assets/mongodb.svg';
-import nestJSVG from '../../public/assets/nestjs.svg';
-import nextSVG from '../../public/assets/nextjs.svg';
-import nodeSVG from '../../public/assets/nodejs.svg';
-import reactSVG from '../../public/assets/react.svg';
-import recoilSVG from '../../public/assets/recoiljs.svg';
-import socketIoSVG from '../../public/assets/socketio.svg';
-import tailwindSVG from '../../public/assets/tailwindcss.svg';
-import typescriptSVG from '../../public/assets/typescript.svg';
-import webRTCSVG from '../../public/assets/webrtc.svg';
+import expressSVG from '/assets/express.svg';
+import framerMotionSVG from '/assets/framermotion.svg';
+import graphQLSVG from '/assets/graphql.svg';
+import mongoDBSVG from '/assets/mongodb.svg';
+import nestJSVG from '/assets/nestjs.svg';
+import nextSVG from '/assets/nextjs.svg';
+import nodeSVG from '/assets/nodejs.svg';
+import reactSVG from '/assets/react.svg';
+import recoilSVG from '/assets/recoiljs.svg';
+import socketIoSVG from '/assets/socketio.svg';
+import tailwindSVG from '/assets/tailwindcss.svg';
+import typescriptSVG from '/assets/typescript.svg';
+import webRTCSVG from '/assets/webrtc.svg';
 
 const SkillBadge = ({ svg, name, className }) => (
   <motion.div
@@ -29,7 +29,7 @@ const SkillBadge = ({ svg, name, className }) => (
   </motion.div>
 );
 
-const Skills = () => {
+const WebDevSkills = () => {
   return (
     <div className="flex items-center justify-center bg-[#000005]">
       <div className="mb-12 flex w-full flex-wrap items-center justify-center gap-10 px-5 sm:mb-24 sm:w-4/5 sm:px-0 lg:gap-16 xl:w-3/5">
@@ -51,4 +51,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default WebDevSkills;
