@@ -1,15 +1,66 @@
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { navigationLinks } from '../constants';
+import { useAnimate, stagger } from 'framer-motion';
+
+const navigationLinks = [
+  { name: 'Home', href: '#home' },
+  { name: 'About', href: '#about' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
+];
+
+function useMenuAnimation(isOpen) {
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => { 
+    const menuAnimations = isOpen
+      ? [
+          [
+            "nav",
+            { transform: "translateX(0%)" },
+            { ease: [0.08, 0.65, 0.53, 0.96], duration: 0.6 }
+          ],
+          [
+            "li",
+            { transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
+            { delay: stagger(0.05), at: "-0.1" }
+          ]
+        ]
+      : [
+          [
+            "li",
+            { transform: "scale(0.5)", opacity: 0, filter: "blur(10px)" },
+            { delay: stagger(0.05, { from: "last" }), at: "<" }
+          ],
+          ["nav", { transform: "translateX(-100%)" }, { at: "-0.1" }]
+        ];
+
+    animate([
+      [
+        "path.top",
+        { d: isOpen ? "M 3 16.5 L 17 2.5" : "M 2 2.5 L 20 2.5" },
+        { at: "<" }
+      ],
+      ["path.middle", { opacity: isOpen ? 0 : 1 }, { at: "<" }],
+      [
+        "path.bottom",
+        { d: isOpen ? "M 3 2.5 L 17 16.346" : "M 2 16.346 L 20 16.346" },
+        { at: "<" }
+      ],
+      ...menuAnimations
+    ]);
+  }, [isOpen]);
+
+  return scope;
+}
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [atHome, setAtHome] = useState(true); // State to track if the viewport is at the Home section
+  const [atHome, setAtHome] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Attempt to access the home element, handle cases where the element might not exist
-      const homeElement = document.querySelector('[name="home"]');
+      const homeElement = document.querySelector('#home');
       if (homeElement) {
         const homeHeight = homeElement.clientHeight;
         const scrolled = window.scrollY;
@@ -24,6 +75,8 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const scope = useMenuAnimation(isOpen);
 
   return (
     <nav className={`fixed top-0 w-full z-30 ${atHome ? 'bg-[#121212] opacity-100' : 'bg-transparent opacity-75'} transition-opacity duration-300 ease-in-out flex items-center justify-between px-10 py-4`}>
@@ -41,7 +94,7 @@ const Navbar = () => {
           </a>
         ))}
       </div>
-      <div className="md:hidden">
+      <div className="md:hidden" ref={scope}>
         <button onClick={toggleMenu}>
           {isOpen ? <AiOutlineClose size={28} color="white" /> : <AiOutlineMenu size={28} color="white" />}
         </button>
