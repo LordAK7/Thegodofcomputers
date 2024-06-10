@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import './Hero.css';
 
 const Hero = () => {
   return (
     <div>
       {/* Change the height of this section as needed */}
-      <section className="bg-[#000005] overflow-hidden relative h-[20vh] flex items-center justify-center">
+      <section className="custom-bg-fixed overflow-hidden relative h-[20vh] flex items-center justify-center">
         <div className="relative w-full mx-auto max-w-7xl">
           <div className="relative flex flex-col w-full p-5 mx-auto lg:px-16 md:flex-row md:items-center md:justify-center md:px-6">
             {/* Removed Windstatic text and related elements */}
@@ -14,7 +15,7 @@ const Hero = () => {
       </section>
 
       {/* Change the height of this section as needed */}
-      <section className="items-center justify-center bg-[#000005] flex h-[75vh]">
+      <section className="custom-bg-fixed items-center justify-center flex h-[75vh]">
         <div className="relative items-center w-full px-5 py-12 mx-auto lg:px-16 max-w-7xl md:px-12 lg:py-48">
           <motion.div 
             initial={{ opacity: 0, y: 50 }} 

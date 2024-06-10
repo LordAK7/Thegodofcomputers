@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import expressSVG from '/assets/express.svg';
-import framerMotionSVG from '/assets/framermotion.svg';
-import graphQLSVG from '/assets/graphql.svg';
-import mongoDBSVG from '/assets/mongodb.svg';
-import nestJSVG from '/assets/nestjs.svg';
-import nextSVG from '/assets/nextjs.svg';
-import nodeSVG from '/assets/nodejs.svg';
-import reactSVG from '/assets/react.svg';
-import recoilSVG from '/assets/recoiljs.svg';
-import socketIoSVG from '/assets/socketio.svg';
-import tailwindSVG from '/assets/tailwindcss.svg';
-import typescriptSVG from '/assets/typescript.svg';
-import webRTCSVG from '/assets/webrtc.svg';
+import expressSVG from '/web/express.svg';
+import framerMotionSVG from '/web/framermotion.svg';
+import graphQLSVG from '/web/graphql.svg';
+import mongoDBSVG from '/web/mongodb.svg';
+import nestJSVG from '/web/nestjs.svg';
+import nextSVG from '/web/nextjs.svg';
+import nodeSVG from '/web/nodejs.svg';
+import reactSVG from '/web/react.svg';
+import recoilSVG from '/web/recoiljs.svg';
+import socketIoSVG from '/web/socketio.svg';
+import tailwindSVG from '/web/tailwindcss.svg';
+import typescriptSVG from '/web/typescript.svg';
+import webRTCSVG from '/web/webrtc.svg';
 
 const SkillBadge = ({ svg, name, className }) => (
   <motion.div
