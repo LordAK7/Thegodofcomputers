@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useAnimate, stagger } from 'framer-motion';
-
-const navigationLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
-];
+import { navigationLinks } from '../constants';
 
 function useMenuAnimation(isOpen) {
   const [scope, animate] = useAnimate();
