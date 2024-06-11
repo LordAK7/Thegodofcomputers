@@ -4,25 +4,45 @@ import Web from "./components/Web";
 import WebDevSkills from "./components/webSkills";
 import Dev from "./components/Dev";
 import DevSkills from "./components/devSkills";
+import Project from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
 
 export default function App() {
   return (
     <div>
+
       <Navbar/>
-      <Home/>
-      <Web/>
-      <WebDevSkills/>
-      <Dev/>
-      <DevSkills/>
-      <Contact/>
-      <Footer/>
+      <section id="home">
+
+        <Home/>
+      </section>
+
+      <section id="web">
+        <Web/>
+      </section>
+
+      <section id="webDevSkills">
+        <WebDevSkills/>
+      </section>
+      
+      <section id="dev">
+        <Dev/>
+      </section>
+
+      <section id="devSkills">
+        <DevSkills/>
+      </section>
+
+      {/* <section id="project">
+        <Project/>
+      </section> */}
+
+      <section id="contact">
+        <Contact/>
+      </section>
+
+      {/* <Footer/> */}
     </div>
   );
 }
-
-
-
- 
