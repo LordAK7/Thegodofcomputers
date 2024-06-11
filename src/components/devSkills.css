@@ -1,0 +1,13 @@
+/* styles.css */
+
+.logo-size {
+    height: 63.99px;
+    width: auto;
+  }
+  
+  @media (max-width: 1277px) {
+    .logo-size {
+      height: 40px;
+    }
+  }
+  
