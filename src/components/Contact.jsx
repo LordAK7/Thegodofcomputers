@@ -1,99 +1,121 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { BsChevronUp } from 'react-icons/bs';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.45, // Trigger when 45% of the component is in view
-  });
+  const setMouseVariant = {
+    text: () => console.log('Mouse enter'),
+    default: () => console.log('Mouse leave')
+  };
 
-  useEffect(() => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
+
+  React.useEffect(() => {
     if (inView) {
       controls.start('visible');
     }
   }, [controls, inView]);
 
-  const variants = {
+  const containerVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        when: 'beforeChildren',
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
   return (
-    <section ref={ref}>
-      <div className="p-10 text-center md:p-20" style={{ backgroundColor: '#000005' }}>
-        <motion.p
-          className="mt-8 text-3xl font-extrabold tracking-tight text-white lg:text-6xl"
+    <section className="relative h-screen w-full bg-[#000005]" id="contact">
+      <div className="flex h-full w-full flex-col items-center justify-center">
+        <motion.div
+          ref={ref}
           initial="hidden"
           animate={controls}
-          variants={variants}
+          variants={containerVariants}
+          className="flex flex-col items-center justify-center"
         >
-          Want to{' '}
-          <span
-            className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent"
-            style={{ background: 'linear-gradient(to right, #34d399, #10b981)', WebkitBackgroundClip: 'text', color: 'transparent' }}
+          <motion.h1
+            variants={itemVariants}
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black dark:text-white leading-tight -mt-10 w-full px-10 text-center sm:mt-0"
+            onMouseEnter={setMouseVariant.text}
+            onMouseLeave={setMouseVariant.default}
+            id="contact"
           >
-            work
-          </span>{' '}
-          with{' '}
-          <span
-            className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent"
-            style={{ background: 'linear-gradient(to right, #34d399, #10b981)', WebkitBackgroundClip: 'text', color: 'transparent' }}
-          >
-            me
-          </span>
-          ?
-        </motion.p>
-        <motion.p
-          className="mx-auto mt-4 text-base font-medium text-gray-300"
-          style={{ whiteSpace: 'pre-line' }}
-          initial="hidden"
-          animate={controls}
-          variants={variants}
-          transition={{ duration: 1, delay: 0.7 }}
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          {'\n'}Labore libero saepe veniam quidem adipisci rem quisquam excepturi!
-          {'\n'}Fugit non, dolor aperiam amet iusto.
-        </motion.p>
+            Let&apos;s work together.
+          </motion.h1>
 
-        <form className="w-full max-w-xs mx-auto mt-8">
-          <div className="flex flex-col w-full gap-2 lg:flex-row">
-            <label htmlFor="email-address" className="sr-only">Email address</label>
-            <motion.input
-              name="email"
-              id="email-address"
-              type="email"
-              autoComplete="email"
-              placeholder="Enter your email"
-              aria-describedby="emailHelp"
-              required
-              className="block w-full h-12 px-4 py-2 text-black duration-200 border rounded-lg appearance-none bg-white border-zinc-300 placeholder-zinc-300 focus:border-zinc-300 focus:outline-none focus:ring-zinc-300 sm:text-sm"
-              initial="hidden"
-              animate={controls}
-              variants={variants}
-              transition={{ duration: 1, delay: 0.9 }}
-            />
-            <span id="emailHelp" className="sr-only">Please enter your email address to subscribe.</span>
-            <motion.button
-              type="submit"
-              aria-label="Primary action"
-              className="inline-flex items-center justify-center w-full h-12 gap-3 px-5 py-3 font-medium text-black duration-200 bg-white md:w-auto rounded-xl hover:bg-gray-300 focus:ring-2 focus:ring-offset-2 focus:ring-white"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial="hidden"
-              animate={controls}
-              variants={variants}
-              transition={{ duration: 1, delay: 1.1 }}
+          <motion.p
+            variants={itemVariants}
+            className="mt-3 text-lg text-zinc-400 lg:mt-4 lg:text-xl"
+          >
+            adityatinkercad@gmail.com
+          </motion.p>
+          <motion.a
+            variants={itemVariants}
+            className="bg-[#A1A1AA] text-black hover:bg-white hover:text-black mt-4 rounded-2xl p-2 px-4 text-lg font-extrabold transition-all duration-300 lg:mt-6 lg:p-3 lg:px-6 lg:text-xl"
+            href="mailto:adityatinkercad@gmail.com"
+          >
+            Contact me
+          </motion.a>
+        </motion.div>
+
+        <motion.button
+          className="absolute bottom-20 flex flex-col items-center rounded-lg bg-transparent text-white p-2 font-sans text-lg transition-colors hover:bg-zinc-800"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          <BsChevronUp />
+          Back to top
+        </motion.button>
+
+        <div className="absolute bottom-0 h-20 w-full">
+          <div className="flex h-full w-full items-center justify-center gap-5 text-lg text-zinc-400 lg:text-xl">
+            <p>© {getCopyrightYear()} Aditya Kamble</p>
+            <a
+              href="https://www.linkedin.com/in/aditya-kamble-007071228/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="scale-btn"
             >
-              Contact
-            </motion.button>
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="https://github.com/LordAK7"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="scale-btn"
+            >
+              <FaGithub />
+            </a>
           </div>
-        </form>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Contact;
+
+const getCopyrightYear = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+
+  return year;
+};
