@@ -15,8 +15,6 @@ const Web = () => {
     }
   }, [controls, inView]);
 
-  // Define a variable for the text size and animation duration
-  const textSize = "text-6xl"; // Change this value to adjust the size of all text
   const animationDuration = 0.5; // Change this value to adjust the speed of animation
 
   return (
@@ -33,7 +31,7 @@ const Web = () => {
         transition={{ duration: animationDuration, ease: 'easeInOut' }}
       >
         <motion.h2 
-          className={`${textSize} font-extrabold text-black dark:text-white leading-tight`} 
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black dark:text-white leading-tight" 
           initial="hidden"
           animate={controls}
           variants={{
@@ -55,7 +53,7 @@ const Web = () => {
             I'm Aditya,
           </motion.span>
           <motion.span 
-            className={`block ${textSize} text-[#ffffff]`}
+            className="block text-4xl sm:text-5xl lg:text-6xl text-[#ffffff]"
             initial="hidden"
             animate={controls}
             variants={{
@@ -73,7 +71,7 @@ const Web = () => {
             </span>
           </motion.span>
           <motion.span 
-            className={`block ${textSize} text-[#ffffff]`}
+            className="block text-4xl sm:text-5xl lg:text-6xl text-[#ffffff]"
             initial="hidden"
             animate={controls}
             variants={{
@@ -85,7 +83,7 @@ const Web = () => {
             that creates interactive
           </motion.span>
           <motion.span 
-            className={`block ${textSize} text-[#ffffff]`}
+            className="block text-4xl sm:text-5xl lg:text-6xl text-[#ffffff]"
             initial="hidden"
             animate={controls}
             variants={{
