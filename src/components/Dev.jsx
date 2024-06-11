@@ -15,8 +15,6 @@ const Dev = () => {
     }
   }, [controls, inView]);
 
-  // Define a variable for the text size and animation duration
-  const textSize = "text-6xl"; // Change this value to adjust the size of all text
   const animationDuration = 0.5; // Change this value to adjust the speed of animation
 
   return (
@@ -33,7 +31,7 @@ const Dev = () => {
         transition={{ duration: animationDuration, ease: 'easeInOut' }}
       >
         <motion.h2 
-          className={`${textSize} font-extrabold text-black dark:text-white leading-tight`} 
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black dark:text-white leading-tight" 
           initial="hidden"
           animate={controls}
           variants={{
@@ -52,10 +50,10 @@ const Dev = () => {
             }}
             transition={{ duration: animationDuration, ease: 'easeInOut', delay: animationDuration * 0.5 }}
           >
-            I'm Also a God damn ,
+            I'm Also a God damn,
           </motion.span>
           <motion.span 
-            className={`block ${textSize} text-[#ffffff]`}
+            className="block text-4xl sm:text-5xl lg:text-6xl text-[#ffffff]"
             initial="hidden"
             animate={controls}
             variants={{
@@ -78,7 +76,7 @@ const Dev = () => {
             </span>
           </motion.span>
           <motion.span 
-            className={`block ${textSize} text-[#ffffff]`}
+            className="block text-4xl sm:text-5xl lg:text-6xl text-[#ffffff]"
             initial="hidden"
             animate={controls}
             variants={{
@@ -90,7 +88,7 @@ const Dev = () => {
             who likes to solve 
           </motion.span>
           <motion.span 
-            className={`block ${textSize} text-[#ffffff]`}
+            className="block text-4xl sm:text-5xl lg:text-6xl text-[#ffffff]"
             initial="hidden"
             animate={controls}
             variants={{
