@@ -4,6 +4,7 @@ import Web from "./components/Web";
 import WebDevSkills from "./components/webSkills";
 import Dev from "./components/Dev";
 import DevSkills from "./components/devSkills";
+import Project from "./components/Project"; 
 import Contact from "./components/Contact";
 
 export default function App() {
@@ -31,6 +32,10 @@ export default function App() {
       <section id="devSkills">
         <DevSkills/>
       </section>
+{/* 
+      <section id="project">
+        <Project/>
+      </section> */}
 
       <section id="contact">
         <Contact/>
