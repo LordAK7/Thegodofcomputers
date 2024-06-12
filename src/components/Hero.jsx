@@ -38,8 +38,8 @@ const Hero = () => {
                 transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
                 className="mt-8 text-3xl font-extrabold tracking-tight text-white lg:text-6xl"
               >
-                Some random text 
-                <span className="md:block">would not like to be here</span>
+                Empowering Innovation 
+                <span className="md:block">Through Code</span>
               </motion.p>
               <motion.p 
                 initial={{ opacity: 0 }} 
@@ -47,8 +47,7 @@ const Hero = () => {
                 transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
                 className="max-w-xl mx-auto mt-8 text-base lg:text-xl text-slate-300"
               >
-                Effortlessly create, pitch, and validate your early-stage business
-                with our no-code landing page builder.
+                Turning ideas into interactive digital experiences that have real world meaning.
               </motion.p>
             </div>
             <motion.div 
