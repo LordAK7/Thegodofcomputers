@@ -49,7 +49,7 @@ const Contact = () => {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white dark:text-white leading-tight -mt-10 w-full px-10 text-center sm:mt-0"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black dark:text-white leading-tight -mt-10 w-full px-10 text-center sm:mt-0"
             onMouseEnter={setMouseVariant.text}
             onMouseLeave={setMouseVariant.default}
             id="contact"
@@ -61,12 +61,12 @@ const Contact = () => {
             variants={itemVariants}
             className="mt-3 text-lg text-zinc-400 lg:mt-4 lg:text-xl"
           >
-            adityatinkercad@gmail.com
+            aditya.kamble@thegodofcomputers.com
           </motion.p>
           <motion.a
             variants={itemVariants}
             className="bg-[#A1A1AA] text-black hover:bg-white hover:text-black mt-4 rounded-2xl p-2 px-4 text-lg font-extrabold transition-all duration-300 lg:mt-6 lg:p-3 lg:px-6 lg:text-xl"
-            href="mailto:adityatinkercad@gmail.com"
+            href="mailto:aditya.kamble@thegodofcomputers.com"
           >
             Contact me
           </motion.a>
