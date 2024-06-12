@@ -4,9 +4,7 @@ import Web from "./components/Web";
 import WebDevSkills from "./components/webSkills";
 import Dev from "./components/Dev";
 import DevSkills from "./components/devSkills";
-import Project from "./components/Projects";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -34,15 +32,10 @@ export default function App() {
         <DevSkills/>
       </section>
 
-      {/* <section id="project">
-        <Project/>
-      </section> */}
-
       <section id="contact">
         <Contact/>
       </section>
 
-      {/* <Footer/> */}
     </div>
   );
 }
