@@ -49,7 +49,7 @@ const Contact = () => {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black dark:text-white leading-tight -mt-10 w-full px-10 text-center sm:mt-0"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white dark:text-white leading-tight -mt-10 w-full px-10 text-center sm:mt-0"
             onMouseEnter={setMouseVariant.text}
             onMouseLeave={setMouseVariant.default}
             id="contact"

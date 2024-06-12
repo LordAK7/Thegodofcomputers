@@ -31,7 +31,7 @@ const Web = () => {
         transition={{ duration: animationDuration, ease: 'easeInOut' }}
       >
         <motion.h2 
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black dark:text-white leading-tight" 
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white dark:text-white leading-tight" 
           initial="hidden"
           animate={controls}
           variants={{
@@ -50,19 +50,19 @@ const Web = () => {
             }}
             transition={{ duration: animationDuration, ease: 'easeInOut', delay: animationDuration * 0.5 }}
           >
-            I'm Aditya,
+            I'm Aditya, a
           </motion.span>
           <motion.span 
             className="block text-4xl sm:text-5xl lg:text-6xl text-[#ffffff]"
             initial="hidden"
             animate={controls}
             variants={{
-              hidden: { opacity: 0, scale: 0.5 },
+               hidden: { opacity: 0, scale: 0.5 },
               visible: { opacity: 1, scale: 1 }
             }}
             transition={{ duration: animationDuration, ease: 'easeInOut', delay: animationDuration * 1 }}
           >
-            a Fullstack&nbsp;
+            Fullstack&nbsp;
             <span 
               className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
               style={{ background: 'linear-gradient(to right, #3b82f6, #2563eb)', WebkitBackgroundClip: 'text', color: 'transparent' }}

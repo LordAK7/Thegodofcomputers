@@ -31,7 +31,7 @@ const Dev = () => {
         transition={{ duration: animationDuration, ease: 'easeInOut' }}
       >
         <motion.h2 
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black dark:text-white leading-tight" 
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white dark:text-white leading-tight" 
           initial="hidden"
           animate={controls}
           variants={{
