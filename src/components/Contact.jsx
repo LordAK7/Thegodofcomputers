@@ -79,7 +79,7 @@ const Contact = () => {
           transition={{ duration: 1.5, repeat: Infinity }}
         >
           <BsChevronUp />
-          Back to top
+          Back to the top
         </motion.button>
 
         <div className="absolute bottom-0 h-20 w-full">

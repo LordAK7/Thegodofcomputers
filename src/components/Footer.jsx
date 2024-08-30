@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
         <div className="md:order-1">
           <span className="text-sm font-medium text-white">
-            Copyright © <span>{year}</span>
+            Copyright ©2024 <span>{year}</span>
             <a
               aria-label="Michael Andreuzza"
               href="#"
