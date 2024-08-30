@@ -48,9 +48,9 @@ const Footer = () => {
               href="#"
               className="mx-2 text-blue-500 hover:text-white"
             >
-              Michael Andreuzza
+              Aditya Kamble
             </a>
-            Since 1985
+            Since 2008 lol
           </span>
         </div>
       </div>
