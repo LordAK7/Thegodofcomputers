@@ -20,15 +20,11 @@ export default function App() {
       <section id="web">
         <Web/>
       </section>
-
-      <section id="devSkills">
-        <DevSkills/>
-      </section>
-
+      
       <section id="webDevSkills">
         <WebDevSkills/>
       </section>
-      
+
       <section id="dev">
         <Dev/>
       </section>
@@ -36,6 +32,7 @@ export default function App() {
       <section id="devSkills">
         <DevSkills/>
       </section>
+
 {/* 
       <section id="project">
         <Project/>
