@@ -9,7 +9,6 @@ const Hero = () => {
       <section className="custom-bg-fixed overflow-hidden relative h-[20vh] flex items-center justify-center">
         <div className="relative w-full mx-auto max-w-7xl">
           <div className="relative flex flex-col w-full p-5 mx-auto lg:px-16 md:flex-row md:items-center md:justify-center md:px-6">
-            {/* Removed Windstatic text and related elements */}
           </div>
         </div>
       </section>
@@ -56,7 +55,7 @@ const Hero = () => {
               transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
               className="flex flex-col justify-center max-w-sm gap-3 mx-auto mt-10 sm:flex-row"
             >
-              {/* Add any buttons or links here */}
+              {/* Can any buttons or links here */}
             </motion.div>
           </motion.div>
         </div>
