@@ -19,7 +19,7 @@ To set up this project locally, follow these steps:
    Open your terminal and run the following command to clone the repository:
 
    ```bash
-   git clone https://github.com/YourUsername/YourRepoName.git
+   git clone https://github.com/LordAK7/Thegodofcomputers.git
    ```
 
 2. **Navigate into the Project Directory**
@@ -27,7 +27,7 @@ To set up this project locally, follow these steps:
    Change your working directory to the project folder:
 
    ```bash
-   cd YourRepoName
+   cd Thegodofcomputers
    ```
 
 3. **Install Dependencies**
